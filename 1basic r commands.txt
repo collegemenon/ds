@@ -1,0 +1,58 @@
+x<-10
+x
+
+y=10
+y
+
+myName="xyz"
+myName
+
+xyz=c('streets','streams','parcel','railroads')
+length(xyz)
+xyz(4)
+
+xyy=c(1,2,3,4)
+combinedVector=c(xyz,xyy)
+combinedVector
+
+x=c(10,20,30,40,50)
+mean(x)
+
+median(x)
+
+max(x)
+
+min(x)
+
+
+land.type<-factor(c("Commercial" , "Agricultural" , "Commercial" , "Commercial" , "Residential"),levels=c("Residential" , "Commercial"))
+table(land.type)
+
+my.list=list("streets",2000,"parcels",5000,TRUE,FALSE)
+my.list[2]
+
+matrix<-matrix(c(2,4,6,3,4),nrow=2,ncol=3,byrow=TRUE)
+matrix
+
+data frames:
+
+data(USArrests)
+USArrests
+
+USArrests$Assault
+
+install.packages("readr")
+View(dfcrime)
+
+install.packages('ggplot2')
+
+
+
+
+
+R studio is an integrated development environment(ide) for r. Ide is a gui, where you can write your quotes, see the results and also see the variables that are generated during the course of programming. 
+R studio is available as both open source and commercial software.
+R studio is also available as both desktop and server versions.
+R studio is also available for various platforms such as windows, linux, and macos.
+
+

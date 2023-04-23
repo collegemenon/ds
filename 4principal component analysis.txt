@@ -1,0 +1,48 @@
+# taking the numeric part of the iris data
+> data_iris <- iris[1:4]
+
+
+# calculating the covariance matrix
+> cov_data <- cov(data_iris )
+
+# find out the eigenvectors and eigenvalues using the covariance
+ Eigen_data <- eigen(cov_data)
+
+# using the inbuilt function
+> pca_data <- princomp(data_iris ,cor="False")
+
+# let’s now compare the output variances
+> eigen_data$values
+
+pca_data$sdev^2
+
+pca_data$loadings[,1:4]
+
+Eigen_data$vectors
+
+summary(pca_data)
+
+biplot (pca_data)
+
+screeplot(pca_data, type="Lines")
+
+Model2 = pca_data$loadings[,1]
+
+model2_scores <- as.matrix(data_iris) %*% model2
+
+library(class)
+install.packages("E1071")
+library(e1071)
+
+mod1<-naivebayes(iris[,1:4], iris[,5])
+
+mod2<-naivebayes(model2_scores, iris[,5])
+
+table(predict(mod1, iris[,1:4]), iris[,5])
+
+table(predict(mod2, model2_scores), iris[,5])
+
+
+
+Pca is a very popular method of dimensionality reduction because it provides a way to easily reduce the dimensions and is easy to understand. For this reason, pca has been used in various applications from image compression to complex gene comparison.
+Pca is very sensitive to the scale of the data. It will create an initial basis in the direction of the largest variance in the data. Moreover, pca applies transformation over the data where all new components are orthogonal. The new features may not be interpretable in business.

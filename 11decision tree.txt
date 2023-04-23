@@ -1,0 +1,19 @@
+install.packages("Rattle")
+
+library(rattle)
+
+summary(weather)
+
+library(rpart)
+weather<-subset(weather,select=-c(risk_mm))
+model<-rpart(formula=raintomorrow ~ .,data=weather, method="Class")
+summary(model)
+
+library(rpart.plot)
+fancyrpartplot(model,main="Rain tomorrow",sub="Chapter 12")
+
+
+
+for decision tree machine learning,we develop a logic tree that can be used to predict our target value based on a number of predictor variables.
+
+<> a decision tree is a non-parametric supervised learning algorithm, which is utilized for both classification and regression tasks. It has a hierarchical, tree structure, which consists of a root node, branches, internal nodes and leaf nodes.

@@ -1,0 +1,57 @@
+
+lsfit(iris$petal.length, iris$petal.width)$coefficients
+
+plot(iris$petal.length, iris$petal.width, pch=21, bg=c("Red","Green3","Blue")[unclass(iris$
+Species)], main="Iris data", xlab="Petal length", ylab="Petal width")
+
+abline(lsfit(iris$petal.length, iris$petal.width)$coefficients, col="Black")
+
+summary(lm(petal.width ~ petal.length, data=iris))
+
+plot(iris$sepal.width, iris$sepal.length, pch=21, bg=c("Red","Green3","Blue")[unclass(iris
+$species)], main="Iris data", xlab="Sepal width", ylab="Sepal length")
+
+abline(lm(sepal.length ~ sepal.width, data=iris)$coefficients, col="Black")
+
+summary(lm(sepal.length ~ sepal.width, data=iris))
+
+p of simple regression
+
+x=c(254,44,55,23,78,45,90,34,67,177)
+y=c(56,67,99,23,45,22,88,67,54,65)
+print(relation)
+print(summary(relation))
+
+a=data.frame(x=170)
+result=predict(relation,a)
+print(result)
+
+plot(y,x,col="blue",main="height&weight regression",
+abline(1m(x-y)),cex=1.3,pch=16,xlab="weight",ylab="height")
+
+p of multiple regression
+
+input=mtcars[,c("mpg","disp","hp","wt")]
+print(head(input))
+
+input=mtcars[,c("mpg","disp","hp","wt")]
+model=lm(mpg~disp+hp+wt,data=input)
+print(model)
+
+a=coef(model)[1]
+print(a)
+
+xdisp=coef(model)[2]
+xhp=coef(model)[3]
+xwt=coef(model0[4]
+print(a)
+
+print(xdisp)
+print(xhp)
+print(xwt)
+
+
+Regression is a method to determine the statistical relationship between a dependent variable and one or more independent variables. The change independent variable is associated with the change in the independent variables. 
+
+
+

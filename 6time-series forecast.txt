@@ -1,0 +1,23 @@
+# get the data points in form of a r vector.
+Rainfall <- c(799,1174.8,865.1,1334.6,635.4,918.5,685.5,998.6,784.2,985,882.8,1071)
+
+# convert it to a time series object.
+Rainfall.timeseries< -ts(rainfall,start = c(2012,1),frequency = 12)
+
+
+# print the timeseries data.
+Print(rainfall.timeseries)
+
+# give the chart file a name.
+Png(file =”Rainfall.png”)
+
+# plot a graph of the time series.
+Plot(rainfall.timeseries)
+
+
+# save the file.
+Dev.off()
+
+
+
+Time series is a series of data points in which each data point is associated with a timestamp. A simple example is the price of a stock in the stock market at different points of time on a given day. Another example is the amount of rainfall in a region at different months of the year. R language uses many functions to create, manipulate and plot the time series data. The data for the time series is stored in an r object called time-series object. It is also a r data object like a vector or data frame.

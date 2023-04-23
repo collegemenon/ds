@@ -1,0 +1,24 @@
+download apache couchdb from website
+
+library(sofa)
+
+x=Cushion$new()
+x$ping()
+
+db_create(x,dbname='ty')
+db_list(x)
+
+db_create(x,dbname='tty')
+db_list(x)
+doc_create(x,doc1,dbname="tty",docid="a_1")
+
+db_changes(x,"tty")
+
+doc_create(x,doc2,dbname="tty",docid="a_2")
+
+doc1='("rolllno":"03","name":"john","grade":"A","remark":"PASS")'
+doc_create(x,doc1,dbname="tty",docid="a_2")
+
+db_chamges(x,"tty")
+
+

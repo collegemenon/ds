@@ -1,0 +1,28 @@
+x= c(6.2, 6.6, 7.1, 7.4, 7.6, 7.9, 8, 8.3, 8.4, 8.5, 8.6,
+8.8, 8.8, 9.1, 9.2, 9.4, 9.4, 9.7, 9.9, 10.2, 10.4, 10.8,
+11.3, 11.9)
+
+t.test(x-9,alternative="Two.sided",conf.level=0.95)
+
+x=c(418,421,421,422,425,427,431,434,437,439,446,447,448,453,454,463,465)
+
+y=c(429,430,430,431,36,437,440,441,445,446,447)
+test2<-t.test(x,y,alternative="Two.sided",mu=0,var.equal=f,conf.level=0.95)
+test2
+
+
+data<-read.table(“excel-heart-rate-data.csv, header=true, sep=”,”)
+t.test(data,mu=72,alternative="Greater")
+
+
+
+Hypothesis tests, or statistical hypothesis testing, is a technique used to compare two
+Datasets, or a sample from a dataset. It is a statistical inference method so, in the end of
+The test, you'll draw a conclusion— you'll infer something — about the characteristics of
+What you're comparing.
+
+A hypothesis test is usually composed by
+Null hypothesis (h0, read "H zero"): States that all things remain equal. No phenomena
+            Is observed or there is not relationship between what you are comparing;
+Alternative hypothesis (h1, read “h one”): States the opposite of the null hypothesis.
+            That there was some change, or observed relationship 
