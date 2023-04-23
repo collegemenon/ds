@@ -12,7 +12,7 @@
 > pca_data <- princomp(data_iris ,cor="False")
 
 # let’s now compare the output variances
-> eigen_data$values
+> Eigen_data$values
 
 pca_data$sdev^2
 
