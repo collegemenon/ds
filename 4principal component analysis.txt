@@ -24,7 +24,7 @@ summary(pca_data)
 
 biplot (pca_data)
 
-screeplot(pca_data, type="Lines")
+screeplot(pca_data, type="lines")
 
 Model2 = pca_data$loadings[,1]
 
