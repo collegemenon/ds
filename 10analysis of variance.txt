@@ -18,3 +18,4 @@ tukeyhsd(results, conf.level = 0.95)
 
 
 We are often interested in determining whether the means from more than two populations or groups are equal or not. To test whether the difference in means is statistically significant we can perform analysis of variance (anova) using the r function aov(). If the anova f-test shows there is a significant difference in means between the groups we may want to perform multiple comparisons between all pair-wise means to determine how they differ.
+ statistical method for making simultaneous comparisons between two or more means;
