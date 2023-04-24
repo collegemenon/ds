@@ -1,8 +1,10 @@
-data("Usarrests")
-df<-scale(usarrests)
+data("USArrests")
+df<-scale(USArrests)
 head(df,n=3)
 
-install.packages("Factoextra")
+install.packages("factoextra")
+
+library(factoextra)
 
 
 fviz_nbclust(df,kmeans,method="Wss")+geom_vline(xintercept=4,linetype=2)
@@ -11,7 +13,7 @@ set.seed(123)
 km.res<-kmeans(df,4,nstart=25)
 print(km.res)
 
-aggregate(usarrests,by=list(cluster=km.res$cluster),mean)
+aggregate(USArrests,by=list(cluster=km.res$cluster),mean)
 
 dd<-cbind(usarrests,cluster=km.res$cluster)
 head(dd)
